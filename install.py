@@ -43,4 +43,4 @@ try:
 except:
     print("creating service faild")
 else:
-    print("Ok")
+    print("[Ok]")
