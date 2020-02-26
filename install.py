@@ -9,7 +9,8 @@ if os.path.exists(serviceFile):
         os.popen('systemctl stop {name}'.format(name=serviceName))
         print("rm ", serviceFile)
         os.popen("rm {}".format(serviceFile))
-    except: pass
+    except: 
+        print('deleting files faild')
 
 time.sleep(1)
 
@@ -39,4 +40,7 @@ try:
     os.popen('systemctl enable {name}'.format(name=serviceName))
     os.popen('systemctl start {name}'.format(name=serviceName))
     os.popen('systemctl status {name}'.format(name=serviceName))
-except: pass
+except:
+    print("creating service faild")
+else:
+    print("Ok")
