@@ -3,8 +3,6 @@ import time
 import os
 import logging
 from config import first, second, log
-#first = Provider('WNet', ['8.26.56.8', '37.235.1.174'], '192.168.30.10')
-#second = Provider('DTS', ['8.20.247.20', '37.235.1.177'], "192.168.30.254")
 
 cmd = 'systemctl status routechanger | grep "Active: active (running)"'
 serviceRun = list(os.popen(cmd))
